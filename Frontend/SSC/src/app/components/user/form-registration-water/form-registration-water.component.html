@@ -1,0 +1,111 @@
+<div class="registration-page">
+  <div class="secondary-menu">
+    <div class="group-title-page">
+      <a href="javascript:void(0)" (click)="goBack()">
+        <i class="icon-back icon-common fas fa-arrow-left"></i>
+      </a>
+      <div>Đăng ký dịch vụ</div>
+    </div>
+    <div class="secondary-menu-btns">
+      <button class="btn-common btn-secondary btn-medium mr-3 ">Lưu</button>
+      <button class="btn-common btn-secondary btn-medium mr-3 ">Tạo mới</button>
+      <button class="btn-common btn-primary btn-medium">Nộp đơn</button>
+    </div>
+  </div>
+
+  <div class="main-body container-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="left-block col-12">
+          <div class="form-registration section-common">
+            <h4>Đặt bình nước</h4>
+            <h4>Pick a highlight color</h4>
+            <div>
+              <input type="radio" name="colors" (click)="color='lightgreen'">Green
+              <input type="radio" name="colors" (click)="color='yellow'">Yellow
+              <input type="radio" name="colors" (click)="color='cyan'">Cyan
+            </div>
+            <p appHighlight highlightColor="color" defaultColor="violet">Highlight me!</p>
+            <button (click)="onButtonClickedParent()">Click</button>
+            <app-child [text]="title" (ButtonClicked)="onButtonClickedChild($event)"></app-child>
+            <app-child2></app-child2>
+            <p-autoComplete [(ngModel)]="selectedUser" [suggestions]="filteredUsers" (completeMethod)="filterUser($event)" field="name" [minLength]="1">
+
+            </p-autoComplete>
+
+            <div class="form-group-common">
+              <div class="form-group-block">
+                <label for="requester">Làm đơn cho</label>
+                <input type="text"
+                       id="requester"
+                       placeholder="Chọn"
+                       matInput
+                       [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of options" [value]="option.name">
+                    <div class="autocomplate-staff-list">
+                      <div class="avatar">
+                        <img [src]="option.avatar">
+                      </div>
+                      <div class="info">
+                        <div>{{option.name}}</div>
+                        <div class="smaller">{{option.position}}</div>
+                      </div>
+                    </div>
+                  </mat-option>
+                </mat-autocomplete>
+              </div>
+            </div>
+            <div class="form-group-common" [ngClass]="{'error-status': numWaterBottlesControl.invalid}">
+              <div class="form-group-block">
+                <label for="numWaterBottles">Số lượng</label>
+                <input id="numWaterBottles" [formControl]="numWaterBottlesControl" matInput type="number" placeholder="" min="1">
+                <div class="mess-error" *ngIf="numWaterBottlesControl.invalid">Số lượng ít nhất là 1</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="sidebar-right-tabs open-tabs">
+          <p-accordion>
+            <p-accordionTab header="Header 1">
+              <p-autoComplete [(ngModel)]="selectedCountry" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1">
+                <ng-template let-country pTemplate="country">
+                  <img src="https://i.pinimg.com/236x/c4/70/26/c47026a9fce3fc13e7f8c115b5d7676c.jpg" style="width:32px;display:inline-block;margin:5px 0 2px 5px" />
+                  <div style="font-size:18px;float:right;margin:10px 10px 0 0">{{country.name}}</div>
+                </ng-template>
+              </p-autoComplete>
+            </p-accordionTab>
+            <p-accordionTab>
+              <ng-template pTemplate="header">Header Content 2</ng-template>
+              <ng-template pTemplate="content">Body Content</ng-template>
+            </p-accordionTab>
+            <p-accordionTab header="Header 3">
+              Content 3
+            </p-accordionTab>
+          </p-accordion>
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Mô tả
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <div class="expansion-panel-body">
+                <div>
+                  Đơn này dùng để đăng ký đặt mua nước
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

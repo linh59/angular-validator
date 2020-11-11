@@ -1,0 +1,7 @@
+<mat-form-field *ngIf="style == 'material'" appearance="legacy" [ngClass]="{'form-field-full': fullWidth}">
+    <mat-label>{{title}}</mat-label>
+    <input type="number" matInput [placeholder]="placeholder" [ngModel]="value" (ngModelChange)="onValueChange($event)">
+    <mat-icon *ngIf="suffixIcon" matSuffix>{{suffixIcon}}</mat-icon>
+    <mat-icon *ngIf="prefixIcon" matPrefix>{{prefixIcon}}</mat-icon>
+    <mat-hint>{{hint}}</mat-hint>
+</mat-form-field>

@@ -1,0 +1,103 @@
+
+<div class="confirmation-page">
+  <div class="secondary-menu">
+    <div class="group-title-page">
+      <div>Comments</div>
+    </div>
+    <div class="secondary-menu-btns">
+    </div>
+  </div>
+
+  <div class="main-body container-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="left-block col-12">
+          <div class="section-common">
+            <h2>Comments</h2>
+            <table>
+              <tr>
+                <th>Post ID</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+              </tr>
+              <tr *ngFor="let c of listComments">
+                <td>{{c.postId}}</td>
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.body}}</td>
+              </tr>
+            </table>
+
+            <h2>User List</h2>
+            <table>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>address</th>
+              </tr>
+              <tr *ngFor="let c of listUsers" (click)="getIdUser(c)">
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.username}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.address.street}}</td>
+              </tr>
+            </table>
+
+
+            <h2>Comment by User</h2>
+            <table>
+              <tr>
+                <th>User ID</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Body</th>
+              </tr>
+              <tr *ngFor="let c of listPosts">
+                <td>{{c.userId}}</td>
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.body}}</td>
+              </tr>
+            </table>
+
+            <h2>Post</h2>
+            <form #userPost="ngForm" [formGroup]="postForm" (ngSubmit)="onSubmit(userPost.value)">
+              <input type="text" formControlName="title" name="title" placeholder="Title" ngModel />
+              <span *ngIf="postForm.controls.title.invalid && postForm.controls.title.touched">Vui lòng nhập title</span>
+              <input type="text" formControlName="body" name="body" placeholder="Body" ngModel />
+              <button type="submit" [disabled]="!postForm.valid">Submit data</button>
+            </form>
+
+
+
+            <h2>Validator FormGroup</h2>
+            <form [formGroup]="userFormGroup">
+              <input type="text" formControlName="name" placeholder="Name" />
+              <span *ngIf="userFormGroup.controls.name.invalid && userFormGroup.controls.name.touched">Vui lòng nhập title</span>
+              <input type="text" formControlName="username" placeholder="username" />
+              <input type="text" formControlName="email" placeholder="email" />
+              <div formGroupName="address">
+                <input type="text" formControlName="street" placeholder="street" />
+              </div>
+
+              <p>Form value: {{userFormGroup.value | json}}</p>
+              <p>Form status: {{userFormGroup.status | json}}</p>
+              <p>Form untouched: {{userFormGroup.untouched | json}}</p>
+              <p>Form changed: {{userFormGroup.dirty | json}}</p>
+              <button type="submit" [disabled]="!userFormGroup.valid">Submit data</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

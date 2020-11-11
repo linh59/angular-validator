@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+// Library Import
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/theming";
+@include mat-core();
+
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+// Style import
+//@import "assets/scss/define/color.scss";
+@import "./scss/theme/light-normal.scss";
+//@import "assets/scss/theme/light-admin.scss";
+
+@import "./scss/helpers/variables.scss";
+@import "./scss/helpers/typography.scss";
+@import "./scss/helpers/icons.scss";
+//@import "./scss/helpers/fonts.scss";
+//@import "./scss/helpers/mixins.scss";
+
+@import "./scss/components/buttons.scss";
+@import "./scss/components/form.scss";
+@import "./scss/components/expansion-panel.scss";
+@import "./scss/components/side-bar.scss";
+@import "./scss/components/cards.scss";
+@import "./scss/components/input.scss";
+@import "./scss/components/autocomplete.scss";
+@import "./scss/components/select.scss";
+@import "./scss/components/comment.scss";
+@import "./scss/components/upload-file.scss";
+@import "./scss/components/dropdown.scss";
+
+@import "./scss/layout/nav-bar.scss";
+@import "./scss/layout/secondary-menu.scss";
+@import "./scss/layout/common-layout.scss";
+
+@import "./scss/pages/form-registration-page.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray-900;
+  background-color: $gray-50;
+}
+
+
+.mat-body,
+.mat-body-1,
+.mat-typography {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}

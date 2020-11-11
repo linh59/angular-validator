@@ -1,0 +1,38 @@
+.comment-list {
+  .comment {
+    display: flex;
+    min-height: 110px;
+    padding: 1.5rem 8rem 1.5rem 0;
+
+    .comment-avatar {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+    }
+
+    .comment-info {
+      width: 100%;
+      margin-left: 3rem;
+
+      .name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 1rem;
+      }
+
+      .posted-time {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}

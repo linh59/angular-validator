@@ -1,0 +1,23 @@
+.main-body {
+  margin-top: 100px;
+  padding: 0 2rem;
+  padding-right: 300px;
+  transition: 0.3s ease;
+}
+
+.group-title-page {
+  display: flex;
+  align-items: center;
+  .icon-back{
+      margin-right: 1rem;
+  }
+}
+
+.section-common {
+  padding: 2rem 6rem;
+  background-color: $white;
+}
+.sidenav-content {
+  background-color: $body-background;
+}
+

@@ -1,0 +1,5 @@
+{
+    "apiUrl": "http://dev.twgroup.vn:5012/api/",
+    "authenticationUrl": "http://dev.twgroup.vn/",
+    "hrTokenValidInMinutes": 480
+}

@@ -1,0 +1,35 @@
+.navbar {
+  height: 48px;
+  background-color: $white;
+  border-bottom: 1px solid $gray-100;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background-color: $blue-900;
+
+  .navbar-brand {
+    img {
+      height: 20px;
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+
+}
+
+.navigation-action {
+  display: flex;
+  align-items: center;
+  .action-menu{
+      margin-left: 1.5rem;
+  }
+}

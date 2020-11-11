@@ -1,0 +1,15 @@
+{
+    "admin": {
+        "serviceInfomation": {
+            "title": "Tên dịch vụ",
+            "titlePlaceholder": "Vui lòng nhập tên dịch vụ",
+
+            "description": "Mô tả dịch vụ",
+            "descriptionPlaceholder": "Vui lòng nhập mô tả dịch vụ (tuỳ chọn)"
+        }
+    },
+    "layout": {
+        "createService": "Tạo dịch vụ",
+        "serviceList": "Danh sách dịch vụ"
+    }
+}

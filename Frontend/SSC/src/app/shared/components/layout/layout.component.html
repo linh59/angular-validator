@@ -1,0 +1,110 @@
+<!--<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button (click)="sidenav.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a routerLink="/home">
+            <img src="/assets/svgs/TWG-white.svg">
+        </a>
+        <div>
+            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+                <li>
+                    <a routerLink="/DanhSachDichVu">Dịch vụ</a>
+                </li>
+            </ul>
+        </div>
+
+        <span class="user-name">User Test</span>
+        <button mat-icon-button [matMenuTriggerFor]="primaryMenu">
+            <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #primaryMenu="matMenu" xPosition="before" [overlapTrigger]="false">
+            <button routerLink="/profile" mat-menu-item>Profile</button>
+            <button mat-menu-item>
+                <mat-icon>public</mat-icon>
+                Đổi ngôn ngữ
+            </button>
+            <button mat-menu-item>Đăng xuất</button>
+        </mat-menu>
+         <mat-menu #languagueMenu="matMenu" xPosition="before">
+            <button mat-menu-item *ngFor="let lang of langCollection" (click)="changeLang(lang[0])">
+                {{ lang[1] }}
+                <mat-icon *ngIf="lang[0] == translate.currentLang" class="current-language">done</mat-icon>
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>-->
+<!--<mat-sidenav-container>
+    <mat-sidenav #appDrawer opened="false">
+        <mat-nav-list class="nav-list">
+            <a routerLink="/DanhSachDichVu" mat-list-item>{{"layout.serviceList" | translate}}</a>
+            <a mat-list-item>Lịch sử</a>
+            <a mat-list-item>Báo cáo</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="sidenav-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>-->
+
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">
+    <img src="assets/svgs/logo_TWG_color.svg" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/DanhSachDichVu" routerLinkActive="active">
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Comments" routerLinkActive="active">
+          Comments
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" routerLink="/DanhSachDichVu" routerLinkActive="active">Dịch vụ</a>
+      </li>
+    </ul>
+    <div class="navigation-action">
+      <div class="action-menu dropdown">
+        <a class="btn-common btn-white dropdown-toggle" href="#" role="button" id="creatFormBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tạo dịch vụ
+        </a>
+        <div class="dropdown-menu-group dropdown-menu dropdown-menu-right" aria-labelledby="creatFormBtn">
+          <div class="catalogue-group">
+            <div class="catalogue-title">Mua hàng</div>
+            <ul class="dropdown-group">
+              <li>
+                <a routerLink="/DangKyDichVuNuoc">Đặt mua bình nước</a>
+              </li>
+              <li>
+                <a routerLink="/DangKyDichVu">Đặt phòng họp</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="action-menu">
+        <a routerLink="/XetDuyetDichVuPhongHop">
+          <i class="icon-common fas fa-bell"></i>
+        </a>
+      </div>
+      <div class="action-menu">
+        <a routerLink="/DanhSachXetDuyet">
+          <i class="icon-common fas fa-bell"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

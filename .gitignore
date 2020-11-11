@@ -1,0 +1,14 @@
+/Backend/SSC/.vs
+/Backend/SSC/SSC/obj
+/Backend/SSC/SSC/bin
+/Backend/SSC/SSC.Core/obj
+/Backend/SSC/SSC.Core/bin
+/Backend/SSC/SSC.Core/*.user
+/Backend/SSC/SSC.Database/Migrations
+/Backend/SSC/SSC.Database/obj
+/Backend/SSC/SSC.Database/bin
+/Backend/SSC/SSC.DataLayer/obj
+/Backend/SSC/SSC.DataLayer/bin
+/.vs
+/Frontend/SSC/.vs
+/Frontend/SSC/.vscode

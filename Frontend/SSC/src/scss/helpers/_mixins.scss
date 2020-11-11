@@ -1,0 +1,59 @@
+//Font
+@mixin font-face($font-name, $fonts-path, $fonts-version) {
+    font-family: $font-name;
+    src: url('#{$fonts-path}.eot#{$fonts-version}');
+    src: url('#{$fonts-path}.eot?#iefix#{$fonts-version}') format('embedded-opentype'),
+    	 url('#{$fonts-path}.woff#{$fonts-version}') format('woff'),
+         url('#{$fonts-path}.ttf#{$fonts-version}')  format('truetype'),
+         url('#{$fonts-path}.svg##{$font-name}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Media Query
+@mixin respond-to($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+
+// break link
+@mixin breakLink(){
+   /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  //-ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  //word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// three dot
+@mixin threeDot(){
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// img center on a div background
+@mixin imgCenter(){
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+

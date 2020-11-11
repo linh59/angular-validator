@@ -1,0 +1,128 @@
+.btn-common {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.btn-primary {
+    background: $primary;
+    border: 1px solid transparent;
+    color: $white;
+    transition: all 0.1s linear;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+
+    &.btn-small {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    &.btn-large {
+      padding: 8px 20px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: $primary-400;
+      border: 1px solid transparent;
+      color: $white;
+      transition: all 0.1s linear;
+    }
+
+    &:focus {
+      background: $primary-600;
+      border: 1px solid transparent;
+      color: $white;
+      outline: none;
+      transition: all 0.1s linear;
+    }
+
+    &:active {
+      background: $primary-600;
+      border: 1px solid transparent;
+      color: $white;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &.btn-secondary {
+    background: $white;
+    color: $primary;
+    border: 1px solid $primary;
+    transition: all 0.1s linear;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+
+    &.btn-small {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    &.btn-large {
+      padding: 8px 20px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: $primary-400;
+      color: $white;
+      border: 1px solid transparent;
+      transition: all 0.1s linear;
+    }
+
+    &:focus {
+      background: $primary-400;
+      color: $white;
+      border: 1px solid transparent;
+      transition: all 0.1s linear;
+    }
+
+    &:active {
+      background: $primary-400;
+      color: $white;
+      border: 1px solid transparent;
+      transition: all 0.1s linear;
+      ;
+    }
+  }
+
+  &.btn-point-click {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &.btn-white {
+    background-color: $white;
+    color: $blue-900;
+    border-radius: 16px;
+    padding: 0.25rem 0.75rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:after {
+      content: none;
+      border: none;
+    }
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+    background: $primary;
+    border-color: $primary;
+}

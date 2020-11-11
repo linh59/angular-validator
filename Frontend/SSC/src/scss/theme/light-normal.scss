@@ -1,0 +1,10 @@
+$light-normal-theme: mat-light-theme(
+    (
+        color: (
+            primary: mat-palette($mat-orange),
+            accent: mat-palette($mat-red),
+            warn: mat-palette($mat-amber),
+        ),
+    )
+);
+@include angular-material-theme($light-normal-theme);

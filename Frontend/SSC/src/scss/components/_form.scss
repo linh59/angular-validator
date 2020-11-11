@@ -1,0 +1,31 @@
+.form-group-common {
+  margin-bottom: 1rem;
+  position: relative;
+
+  label {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.32px;
+    margin-bottom: 8px;
+  }
+
+  .mat-datepicker-toggle {
+    position: absolute;
+    right: -4px;
+    top: 26px;
+  }
+
+  .form-group-block {
+    position: relative;
+  }
+
+  .form-group-inline {
+    > * {
+      display: inline;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.32px;
+      margin-bottom: 8px;
+    }
+  }
+}

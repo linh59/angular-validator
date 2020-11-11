@@ -1,0 +1,36 @@
+.select-common{
+    min-width: 200px;
+}
+.mat-select {
+  border: 2px solid $gray-200;
+  height: 36px;
+  padding: 8px 18px;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: normal;
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &:focus {
+    border-color: $blue;
+    box-shadow: inset 1px 2px 4px rgba($blue, 0.01), 0px 0px 8px rgba($blue, 0.2);
+    outline: none;
+  }
+
+  &.large {
+    height: 40px;
+  }
+
+  &.small {
+    height: 32px;
+  }
+}
+
+mat-label {
+  font-size: 0;
+}

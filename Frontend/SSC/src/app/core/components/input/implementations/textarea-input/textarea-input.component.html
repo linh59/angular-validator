@@ -1,0 +1,8 @@
+<mat-form-field *ngIf="style == 'material'" appearance="legacy" [ngClass]="{'form-field-full': fullWidth}">
+    <mat-label>{{title}}</mat-label>
+    <textarea matInput [placeholder]="placeholder" [ngModel]="value" (ngModelChange)="onValueChange($event)"></textarea>
+    <!-- <input matInput [placeholder]="placeholder" [(ngModel)]="ivalue" (click)="testChange(ivalue)"> -->
+    <mat-icon *ngIf="suffixIcon" matSuffix>{{suffixIcon}}</mat-icon>
+    <mat-icon *ngIf="prefixIcon" matPrefix>{{prefixIcon}}</mat-icon>
+    <mat-hint>{{hint}}</mat-hint>
+</mat-form-field>
